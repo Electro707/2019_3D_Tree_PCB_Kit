@@ -1,4 +1,5 @@
 EESchema Schematic File Version 5
+LIBS:PCB-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -22,7 +23,7 @@ $Comp
 L Timer:LM555 U1
 U 1 1 5CE99832
 P 3875 3450
-F 0 "U1" H 4175 3800 50  0000 C CNN
+F 0 "U1" H 4200 3100 50  0000 C CNN
 F 1 "LM555" H 3625 3800 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 3875 3450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 3875 3450 50  0001 C CNN
@@ -33,8 +34,8 @@ $Comp
 L Device:C C1
 U 1 1 5CF20C39
 P 4700 3850
-F 0 "C1" H 4815 3896 50  0000 L CNN
-F 1 "C" H 4815 3805 50  0000 L CNN
+F 0 "C1" H 4600 3925 50  0000 L CNN
+F 1 "100uF" H 4700 3775 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4738 3700 50  0001 C CNN
 F 3 "~" H 4700 3850 50  0001 C CNN
 	1    4700 3850
@@ -221,7 +222,7 @@ $Comp
 L Connector_Generic:Conn_01x08 J1
 U 1 1 5CF26EDF
 P 7775 1975
-F 0 "J1" H 7725 2400 50  0000 L CNN
+F 0 "J1" V 7775 2375 50  0000 C CNN
 F 1 "Secondary Tree 1" V 7900 1600 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 7775 1975 50  0001 C CNN
 F 3 "~" H 7775 1975 50  0001 C CNN
@@ -232,8 +233,8 @@ $Comp
 L Transistor_Array:ULN2003 U2
 U 1 1 5CF37A5B
 P 6775 3450
-F 0 "U2" H 6775 4117 50  0000 C CNN
-F 1 "ULN2003" H 6775 4026 50  0000 C CNN
+F 0 "U2" H 7050 2900 50  0000 C CNN
+F 1 "ULN2003" H 6650 4000 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6825 2900 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 6875 3250 50  0001 C CNN
 	1    6775 3450
@@ -285,7 +286,7 @@ $Comp
 L Connector_Generic:Conn_01x08 J2
 U 1 1 5CF99D07
 P 8750 1975
-F 0 "J2" H 8700 2400 50  0000 L CNN
+F 0 "J2" V 8750 2375 50  0000 C CNN
 F 1 "Secondary Tree 2" V 8875 1600 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8750 1975 50  0001 C CNN
 F 3 "~" H 8750 1975 50  0001 C CNN
@@ -369,8 +370,8 @@ Wire Wire Line
 Connection ~ 8075 2725
 Wire Wire Line
 	8075 2725 8075 2175
-Text Notes 9900 5850 1    50   ~ 0
-The main board will contain 2 LED, while the 2 auxilary board will have 1 LED each
+Text Notes 9925 5325 1    50   ~ 0
+The main board will contain 2 LED per channel, while \nthe 2 auxilary board will have 1 LED each per channel
 Wire Wire Line
 	7475 3250 8550 3250
 Connection ~ 7475 3250
@@ -443,7 +444,7 @@ $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 5D31105E
 P 3225 5350
-F 0 "J4" H 3143 5025 50  0000 C CNN
+F 0 "J4" H 3250 5150 50  0000 C CNN
 F 1 "BATT" V 3325 5300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3225 5350 50  0001 C CNN
 F 3 "~" H 3225 5350 50  0001 C CNN
@@ -985,8 +986,8 @@ $Comp
 L Device:R R1
 U 1 1 5CF22E5E
 P 4700 3450
-F 0 "R1" H 4770 3496 50  0000 L CNN
-F 1 "R" H 4770 3405 50  0000 L CNN
+F 0 "R1" H 4725 3300 50  0000 L CNN
+F 1 "4.7k" V 4700 3450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 3450 50  0001 C CNN
 F 3 "~" H 4700 3450 50  0001 C CNN
 	1    4700 3450
@@ -1012,8 +1013,8 @@ L Device:Polyfuse F1
 U 1 1 5DC4DE7F
 P 3500 4900
 F 0 "F1" H 3588 4946 50  0000 L CNN
-F 1 "Polyfuse" H 3588 4855 50  0000 L CNN
-F 2 "Fuse:Fuse_BelFuse_0ZRE0025FF_L9.6mm_W3.8mm" H 3550 4700 50  0001 L CNN
+F 1 "250mA Polyfuse" H 3588 4855 50  0000 L CNN
+F 2 "Fuse:Fuse_BelFuse_0ZRE0005FF_L8.3mm_W3.8mm" H 3550 4700 50  0001 L CNN
 F 3 "~" H 3500 4900 50  0001 C CNN
 	1    3500 4900
 	1    0    0    -1  
